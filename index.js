@@ -27,7 +27,7 @@ app.get('/*', (req, res) => {
 });
 
 const CONNECTION_URL = process.env.REACT_APP_CONNECTION_URL;
-const PORT = process.env.REACT_APP_PORT || 3000;;
+const PORT = process.env.REACT_APP_PORT || 0.0.0.0;
 
 mongoose
 	.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
