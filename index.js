@@ -26,8 +26,8 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const CONNECTION_URL = process.env.REACT_APP_CONNECTION_URL;
-const PORT = "0.0.0.0";
+const CONNECTION_URL = process.env.CONNECTION_URL;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log('Listening on PORT: ', PORT);
