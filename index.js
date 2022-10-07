@@ -27,7 +27,7 @@ app.get('/*', (req, res) => {
 });
 
 const CONNECTION_URL = process.env.REACT_APP_CONNECTION_URL;
-const PORT = process.env.REACT_APP_PORT || 5000;
+const PORT = "0.0.0.0";
 
 app.listen(PORT, () => {
   console.log('Listening on PORT: ', PORT);
