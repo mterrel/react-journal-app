@@ -29,6 +29,10 @@ app.get('/*', (req, res) => {
 const CONNECTION_URL = process.env.REACT_APP_CONNECTION_URL;
 const PORT = process.env.REACT_APP_PORT || 5000;
 
+app.listen(PORT, () => {
+  console.log('Listening on PORT: ', PORT);
+});
+
 mongoose
 	.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(() => app.listen(PORT, () => console.log(`Listening on port: ${PORT}`)))
