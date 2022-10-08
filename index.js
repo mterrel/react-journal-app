@@ -35,5 +35,4 @@ app.listen(PORT, () => {
 
 mongoose
 	.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-	.then(() => app.listen(PORT, () => console.log(`Listening on port: ${PORT}`)))
 	.catch((err) => console.log(err.message));
